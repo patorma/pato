@@ -15,6 +15,5 @@ export class PokemonsApiService {
   getAllPokemons() : Observable<any>{
     return this.http.get<any>(this.URL_API)
     .pipe(map((data:any) => data.results))
-
   }
 }
