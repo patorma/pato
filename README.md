@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Descripcion
 
-En este repositorio se la lista de pokemones de la api, como tarjetas donde se ve su id y nombre y al hacerle click se ve las evoluciones,tipo y habilidades
+En este repositorio se ve la lista de pokemones de la api, como tarjetas donde se ve su id y nombre y al hacerle click se ve las evoluciones,tipo y habilidades
 
 ## Build
 
