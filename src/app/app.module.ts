@@ -10,14 +10,16 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { PokemonComponent } from './pokemons/pokemon/pokemon.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
 import { HttpClientModule } from '@angular/common/http'
-import { FlexLayoutModule } from '@angular/flex-layout'
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { PokemonDetallesComponent } from './pokemons/pokemon/pokemon-detalles/pokemon-detalles.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     PokemonComponent,
-    PokemonsComponent
+    PokemonsComponent,
+    PokemonDetallesComponent
   ],
   imports: [
     BrowserModule,

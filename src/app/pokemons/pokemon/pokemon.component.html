@@ -1,3 +1,15 @@
-<p>
-  pokemon works!
-</p>
+<mat-card>
+  <mat-card-content>
+      <a href=""routerLink="/detallesPokemon/{{pokemon.name}}" ><img  mat-card-image  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{indice+1}}.png" alt="{{pokemon.name}}"></a>
+      <span matBadge="4" matBadgeOverlap="false">ID:{{indice+1}} </span>
+  </mat-card-content>
+
+  <mat-card-title>
+    {{pokemon.name}}
+
+  </mat-card-title>
+  <mat-card-footer>
+      <p>Hola desde el componente pokemon</p>
+
+    </mat-card-footer>
+</mat-card>

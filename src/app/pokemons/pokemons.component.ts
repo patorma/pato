@@ -12,6 +12,7 @@ export class PokemonsComponent implements OnInit {
   //inyectamos el service
   constructor(private pokemonSvc:PokemonsApiService) { }
   allPokemons: Observable<any>;
+  //pokemon: Observable<any>;
   ngOnInit() {
     //aqui se llama al metodo para obtener pokemons
     this.getPokemons()
@@ -20,5 +21,7 @@ export class PokemonsComponent implements OnInit {
   getPokemons(){
     this.allPokemons = this.pokemonSvc.getAllPokemons();
   }
+
+
 
 }

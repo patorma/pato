@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pokemon',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonComponent implements OnInit {
 
+  //como no hay interface usaremos any
+  @Input() pokemon: any
+  @Input() indice:any
   constructor() { }
 
   ngOnInit() {

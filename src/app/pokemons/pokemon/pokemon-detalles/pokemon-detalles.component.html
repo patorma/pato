@@ -1,0 +1,28 @@
+<p>{{name}}</p>
+<div fxFlex fxLayout="column">
+  <div fxLayout="row wrap">
+    <div  class="tarjeta" fxFlex="25" fxFlex.md="33" fxFlex.xs="100" fxLayout="column" *ngFor="let pokemon2 of pokemon | async ; let indice=index">
+      <mat-card>
+        <mat-card-content>
+
+            <span matBadge="4" matBadgeOverlap="false">ID:{{indice+1}} </span>
+        </mat-card-content>
+
+        <mat-card-title>
+
+          {{pokemon2.type}}
+          <p>
+            Detalles de tu pokemon
+          </p>
+
+
+        </mat-card-title>
+        <mat-card-footer>
+            <p>Hola desde el componente pokemonf</p>
+        </mat-card-footer>
+
+      </mat-card>
+    </div>
+  </div>
+</div>
+
