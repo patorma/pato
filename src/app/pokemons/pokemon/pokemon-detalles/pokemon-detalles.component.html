@@ -1,27 +1,42 @@
-<p>{{name}}</p>
+<!-- <p>
+  Detalle de tu pokemon
+</p> -->
 <div fxFlex fxLayout="column">
   <div fxLayout="row wrap">
-    <div  class="tarjeta" fxFlex="25" fxFlex.md="33" fxFlex.xs="100" fxLayout="column" *ngFor="let pokemon2 of pokemon | async ; let indice=index">
+    <div  class="tarjeta" fxFlex="25" fxFlex.md="33" fxFlex.xs="100" fxLayout="column" *ngFor="let pokemon of pokemonForm | async ; let indice=index">
       <mat-card>
         <mat-card-content>
-
+            <a href=""routerLink="/detallesPokemon/{{pokemon.name}}" ><img  mat-card-image  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{indice+1}}.png" alt="{{pokemon.name}}"></a>
             <span matBadge="4" matBadgeOverlap="false">ID:{{indice+1}} </span>
         </mat-card-content>
 
-        <mat-card-title>
-
-          {{pokemon2.type}}
-          <p>
-            Detalles de tu pokemon
-          </p>
-
-
-        </mat-card-title>
         <mat-card-footer>
-            <p>Hola desde el componente pokemonf</p>
-        </mat-card-footer>
+          Tipo de pokemon:{{pokemon.type.name}}
+          {{pokemon.sprites}}
+          {{pokemon.height}}
 
+
+        </mat-card-footer>
       </mat-card>
+  <mat-card>
+    <div  *ngFor="let pokemon2 of pokemonH | async ">
+
+      <!-- Habilidades:{{pokemon2.abilities.ability.name}}
+                  {{pokemon2.id}}
+              {{pokemon2.sprites}}
+              {{pokemon2.height}}
+              {{pokemon2.weight}} -->
+            <mat-card-title>
+
+            </mat-card-title>
+            <mat-card-footer>
+               <p> Habilidades:   {{pokemon2.ability.name}}</p>
+
+              </mat-card-footer>
+
+
+    </div>
+  </mat-card>
     </div>
   </div>
 </div>
