@@ -1,6 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
-import {ActivatedRoute} from '@angular/router'
-import { PokemonsApiService  } from '.././shared/pokemons-api.service'
+import {ActivatedRoute} from '@angular/router';
+import { PokemonsApiService  } from '../../../../services/pokemons-api.service';
 import { Observable,forkJoin } from 'rxjs';
 
 @Component({

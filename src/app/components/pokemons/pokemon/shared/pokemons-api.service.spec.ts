@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PokemonsApiService } from './pokemons-api.service';
+import { PokemonsApiService } from '../../../../services/pokemons-api.service';
 
 describe('PokemonsApiService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
