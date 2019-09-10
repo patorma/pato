@@ -10,21 +10,23 @@ import { Observable,forkJoin } from 'rxjs';
 })
 export class PokemonDetallesComponent implements OnInit {
   private pokemon = { nombre: null, altura: null, peso: null, imagen: null };
-  private pokemonId;
+  public pokemonId;
 
   @Input() indice:any;
   constructor(private _route:ActivatedRoute,private pokemonSvc: PokemonsApiService) {
     this.pokemonId =this._route.snapshot.paramMap.get('id')
    console.log(this._route.snapshot.paramMap.get('id'))
-    console.log(name)
+   /*  console.log(name) */
   }
   // df:any =this._route.snapshot.paramMap.get('id')
   // pokemon:Observable<any>
  
-  pokemonH : Observable<any>
+  pokemonH: Observable<any>
+  nombrepokemon: Observable<any>
   ngOnInit() {
  
     this.getPokemonH(this.pokemonId);
+    this.getNamePokemon(this.pokemonId);
     // this.getPokemon(this._route.snapshot.paramMap.get('id'));
   }
 
@@ -34,13 +36,16 @@ export class PokemonDetallesComponent implements OnInit {
 
   } */
   getPokemonH(pokemonId){
-    this.pokemonH = this.pokemonSvc.getPokemonH(this.pokemonId)
+    this.pokemonH = this.pokemonSvc.getPokemonH(this.pokemonId);
   //   const h = () =>{
   //     for(let r in this.pokemonH ){
   //       this.pokemonH[r]
   //   }
   // }
 
+  }
+  getNamePokemon(pokemonId){
+    this.nombrepokemon = this.pokemonSvc.getNamePokemon(this.pokemonId);
   }
 
   // getPokemon(d:any){

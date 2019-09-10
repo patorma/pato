@@ -3,20 +3,21 @@
 </p> -->
 <div fxFlex fxLayout="column">
     <div fxLayout="row wrap">
-        <div class="tarjeta" fxFlex="25" fxFlex.md="33" fxFlex.xs="100" fxLayout="column" *ngFor="let pokemon of pokemonH| async ; let indice=index">
+        <div class="tarjeta" fxFlex="25" fxFlex.md="33" fxFlex.xs="100" fxLayout="column" *ngFor="let pokemon of nombrepokemon| async ; let indice=index">
             <mat-card>
                 <mat-card-content>
-                    <a href="" routerLink="/detallesPokemon/{{pokemon.name}}"><img mat-card-image src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{indice+1}}.png" alt="{{pokemon.name}}"></a>
-                    <span matBadge="4" matBadgeOverlap="false">ID:{{indice+1}} </span>
+                    <img mat-card-image src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokemonId}}.png" alt="pokemon">
+                    <span matBadge="4" matBadgeOverlap="false">ID:{{pokemonId}} </span>
                 </mat-card-content>
 
                 <mat-card-footer>
-                    Tipo de pokemon:{{pokemon.type.name}} {{pokemon.sprites}} {{pokemon.height}}
+                    Nombre pokemon:<button mat-stroked-button>{{pokemon.name}}</button>
 
 
                 </mat-card-footer>
             </mat-card>
             <mat-card>
+                <p>Habilidades: </p>
                 <div *ngFor="let pokemon2 of pokemonH | async ">
 
                     <!-- Habilidades:{{pokemon2.abilities.ability.name}}
@@ -24,11 +25,12 @@
               {{pokemon2.sprites}}
               {{pokemon2.height}}
               {{pokemon2.weight}} -->
+
                     <mat-card-title>
 
                     </mat-card-title>
                     <mat-card-footer>
-                        <p> Habilidades: {{pokemon2.ability.name}}</p>
+                        <p><button mat-stroked-button>{{pokemon2.ability.name}}</button></p>
 
                     </mat-card-footer>
 

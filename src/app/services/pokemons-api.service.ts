@@ -26,4 +26,9 @@ export class PokemonsApiService {
     return this.http.get<any>(`${this.URL_API2}${pokemonId}`)
     .pipe(map((data: any) => data.abilities));
   }
+
+  getNamePokemon(pokemonId:any):Observable<any>{
+     return this.http.get<any>(`${this.URL_API2}${pokemonId}`)
+     .pipe(map((data:any)=> data.forms));
+  }
 }
