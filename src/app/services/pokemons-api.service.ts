@@ -19,7 +19,7 @@ export class PokemonsApiService {
     .pipe(map((data: any) => data.results));
   }
   getPokemonForm(pokemonId: any): Observable<any> {
-    return this.http.get<any>(`${this.URL_API2}${pokemonId}`)
+    return this.http.get<any>(`${this.URL_API2}${pokemonId + 1}`)
     .pipe(map((data: any) => data.types));
   }
   getPokemonH(pokemonId: any): Observable<any> {

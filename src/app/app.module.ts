@@ -11,7 +11,8 @@ import { PokemonComponent } from './components/pokemons/pokemon/pokemon.componen
 import { PokemonsComponent } from './components/pokemons/pokemons.component';
 import { HttpClientModule } from '@angular/common/http'
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { PokemonDetallesComponent } from './components/pokemons/pokemon/pokemon-detalles/pokemon-detalles.component'
+import { PokemonDetallesComponent } from './components/pokemons/pokemon/pokemon-detalles/pokemon-detalles.component';
+import { TipoComponent } from './components/pokemons/tipo/tipo.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PokemonDetallesComponent } from './components/pokemons/pokemon/pokemon-
     NavbarComponent,
     PokemonComponent,
     PokemonsComponent,
-    PokemonDetallesComponent
+    PokemonDetallesComponent,
+    TipoComponent
   ],
   imports: [
     BrowserModule,

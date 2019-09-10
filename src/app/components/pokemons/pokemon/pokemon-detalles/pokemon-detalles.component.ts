@@ -20,20 +20,20 @@ export class PokemonDetallesComponent implements OnInit {
   }
   // df:any =this._route.snapshot.paramMap.get('id')
   // pokemon:Observable<any>
-  pokemonForm : Observable<any>
+ 
   pokemonH : Observable<any>
   ngOnInit() {
-    this.getPokemonForm()
-    this.getPokemonH()
+ 
+    this.getPokemonH(this.pokemonId);
     // this.getPokemon(this._route.snapshot.paramMap.get('id'));
   }
 
-  getPokemonForm(){
+/*   getPokemonForm(){
     this.pokemonForm = this.pokemonSvc.getPokemonForm(this.pokemonId)
 
 
-  }
-  getPokemonH(){
+  } */
+  getPokemonH(pokemonId){
     this.pokemonH = this.pokemonSvc.getPokemonH(this.pokemonId)
   //   const h = () =>{
   //     for(let r in this.pokemonH ){

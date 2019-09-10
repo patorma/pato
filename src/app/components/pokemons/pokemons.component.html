@@ -1,7 +1,8 @@
 <div fxFlex fxLayout="column">
-  <div fxLayout="row wrap">
-    <div  class="tarjeta" fxFlex="25" fxFlex.md="33" fxFlex.xs="100" fxLayout="column" *ngFor="let pokemon of allPokemons | async ; let indice=index">
-      <app-pokemon [pokemon]="pokemon" [indice]="indice"></app-pokemon>
+    <div fxLayout="row wrap">
+        <div class="tarjeta" fxFlex="25" fxFlex.md="33" fxFlex.xs="100" fxLayout="column" *ngFor="let pokemon of allPokemons | async ; let indice=index">
+
+            <app-pokemon [pokemon]="pokemon" [indice]="indice"></app-pokemon>
+        </div>
     </div>
-  </div>
 </div>
